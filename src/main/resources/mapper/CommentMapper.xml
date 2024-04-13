@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.blog.mapper.CommentMapper">
+
+    <resultMap id="BaseResultMap" type="com.code.blog.entity.Comment">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="source" column="source" jdbcType="BIGINT"/>
+            <result property="type" column="type" jdbcType="VARCHAR"/>
+            <result property="parentCommentId" column="parent_comment_id" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="floorCommentId" column="floor_comment_id" jdbcType="BIGINT"/>
+            <result property="parentUserId" column="parent_user_id" jdbcType="BIGINT"/>
+            <result property="likeCount" column="like_count" jdbcType="BIGINT"/>
+            <result property="commentContent" column="comment_content" jdbcType="VARCHAR"/>
+            <result property="commentInfo" column="comment_info" jdbcType="VARCHAR"/>
+            <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+            <result property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+            <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+            <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,source,type,
+        parent_comment_id,user_id,floor_comment_id,
+        parent_user_id,like_count,comment_content,
+        comment_info,gmt_create,gmt_modified,
+        create_by,update_by,is_deleted
+    </sql>
+</mapper>

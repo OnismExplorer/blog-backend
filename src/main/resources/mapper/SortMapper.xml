@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.blog.mapper.SortMapper">
+
+    <resultMap id="BaseResultMap" type="com.code.blog.entity.Sort">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="sortName" column="sort_name" jdbcType="VARCHAR"/>
+        <result property="sortDescription" column="sort_description" jdbcType="VARCHAR"/>
+        <result property="sortType" column="sort_type" jdbcType="TINYINT"/>
+        <result property="priority" column="priority" jdbcType="INTEGER"/>
+        <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+        <result property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+        <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+        <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+        <result property="isDeleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,sort_name,sort_description,
+        sort_type,priority,gmt_create,
+        gmt_modified,create_by,update_by,
+        is_deleted
+    </sql>
+</mapper>
